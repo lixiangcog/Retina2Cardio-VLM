@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "retina2cardio-vlm"
+version = "0.1.0"
+description = "Report-guided visual evidence acquisition for multimodal retinal screening"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "Pillow>=10", "scipy>=1.12"]
+
+[project.optional-dependencies]
+model = ["torch>=2.5", "torchvision>=0.20", "transformers>=4.51,<5", "peft>=0.15", "accelerate>=1", "timm>=0.9"]
+agent = ["bitsandbytes>=0.45", "qwen-vl-utils>=0.0.8", "monai>=1.3", "opencv-python-headless>=4.8"]
+grpo = ["verl>=0.5"]
+screening = ["scikit-learn>=1.5", "joblib>=1.4"]
+
+[tool.setuptools.packages.find]
+include = ["retina2cardio*"]

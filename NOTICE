@@ -1,0 +1,22 @@
+Retina2Cardio method modules are provided under the repository MIT license except
+where a file carries third-party copyright or a different license notice.
+
+retina2cardio/vision/meta.py is adapted from LLaVA, Copyright 2023 Haotian Liu,
+Apache License 2.0. Source: https://github.com/haotian-liu/LLaVA
+The portable subset removes unused any-resolution/tokenizer paths while preserving
+the current CFP/OCTA module names and visual projection order.
+
+retina2cardio/vision/retfound.py is adapted from RETFound/MAE,
+Copyright Meta Platforms, Inc. and affiliates; revisions by YZ at UCL/Moorfields.
+RETFound license: CC BY-NC 4.0. Source: https://github.com/rmaphoh/RETFound_MAE
+The patch-token (rather than pooled CLS) output is the method adaptation.
+These files and RETFound weights are not relicensed under MIT.
+
+SAM2, Qwen, RetSAM and veRL are external dependencies. Their source/weights are
+not distributed here and retain their own licenses and access conditions.
+RetSAM adapter: https://github.com/Wzhjerry/RetSAM
+SAM2: https://github.com/facebookresearch/sam2
+veRL: https://github.com/volcengine/verl
+GROK inspiration: https://github.com/lixiangcog/GROK-A-Retinal-MLLMs
+SAM-Veteran inspiration: ICLR 2026 proceedings paper eb115a5de129c1b34c30dc5ee72c2ec7.
+No author-released SAM-Veteran code or model is bundled or claimed.
